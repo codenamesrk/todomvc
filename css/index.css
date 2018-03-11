@@ -1,0 +1,102 @@
+*, *:before, *:after {
+	box-sizing : border-box;
+}
+body {
+	background: #f7f7f7;
+	font-family: Montserrat;
+}
+h1 {
+	text-align: center;
+}
+.row {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding:  0;
+    text-size-adjust: 100%;
+}
+.row:before,.row:after {
+    display: table;
+    content: ' ';
+}
+.row:after {
+    clear:  both;
+}
+/* Todo Layout */
+.todo-app {
+	background: #fff;
+	/* padding: 1rem; */
+	border: 1px solid #eaeaea;
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	display: block;
+}
+/* Todo Header */
+.todo-header {
+    position: relative;
+}
+.todo-header .todo-new {
+    width: 100%;
+    font-size: 20px;
+    padding-left: 30px;
+}
+.toggle-all-read {
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+/* Todo Main */
+.todo-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.todo-list li {
+    clear: both;
+    border-bottom: 1px solid #000;
+    padding: 10px 0;
+}
+.toggle-read {
+    float: left;
+    margin-right: 10px;
+}
+.todo {
+    white-space: pre-line;
+    word-break: break-all;
+}
+.todo-remove {
+    float: right;
+}
+/* Todo Footer */
+.todo-footer {
+    text-align: center;
+    padding: 15px;
+}
+.todo-remaining {
+    float: left;
+}
+.todo-clear-completed {
+    float: right;
+}
+.todo-filters {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+.todo-filters > li {
+    display: inline;
+}
+.todo-filters a {    
+    margin: 3px;
+    padding: 3px 7px;
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+.todo-filters a.active {
+    border-color: rgba(175, 47, 47, 0.2);
+}
