@@ -1,0 +1,12 @@
+/*
+add todo
+delete todo
+edit todo
+mark as read
+mark all as read
+
+DOM
+add todo
+remove todo
+make todo editable
+*/

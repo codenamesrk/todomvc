@@ -4,7 +4,7 @@
   "description": "A rudimentary todo app using Backbone.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "keywords": [
     "todo",
