@@ -15,7 +15,8 @@
   "author": "codenamesrk",
   "license": "ISC",
   "devDependencies": {
-    "jasmine": "^3.1.0"
+    "jasmine": "^3.1.0",
+    "jasmine-jquery": "^2.1.1"
   },
   "dependencies": {
     "backbone": "^1.3.3",

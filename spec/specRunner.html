@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner v3.1.0</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-3.1.0/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine-3.1.0/jasmine.css">
+
+  <script src="lib/jasmine-3.1.0/jasmine.js"></script>
+  <script src="lib/jasmine-3.1.0/jasmine-html.js"></script>
+  <script src="lib/jasmine-3.1.0/boot.js"></script>
+  
+  <!-- Lib Files -->
+  <script src="../node_modules/underscore/underscore-min.js"></script>
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/backbone/backbone-min.js"></script>
+  <script src="../node_modules/jasmine-jquery/lib/jasmine-jquery.js"></script>
+  
+  <!-- include Template -->
+  <script type="text/template" id="todo-template">
+    <input type="checkbox" class="toggle-read" name="completed" <%= completed ? 'checked=checked' : '' %>>
+    <label for="completed" class="todo"><%= title %></label>
+    <button class="button-outline button-clear todo-remove">&#10005;</button>        
+  </script>
+
+  <!-- include source files here... -->
+  <script src="../js/main.js"></script>
+
+
+  <!-- include spec files here... -->
+  <script src="todoSpec.js"></script>
+
+
+</head>
+
+<body>
+</body>
+</html>

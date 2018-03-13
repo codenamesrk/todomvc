@@ -21,7 +21,7 @@
             <input type="text" name="newTodo" id="todo-new" class="todo-new">
         </header>
         <div class="row main">
-            <ul class="todo-list">
+            <!-- <ul class="todo-list">
                 <li>
                     <input type="checkbox" class="toggle-read">
                     <label class="todo">First Todo</label>
@@ -37,7 +37,7 @@
                     <label class="todo">First Todo</label>
                     <button class="button-outline button-clear todo-remove">&#10005;</button>
                 </li>
-            </ul>
+            </ul> -->
         </div>
         <footer class="row todo-footer">
             <span class="todo-remaining">
@@ -54,8 +54,9 @@
         </footer>
     </section>
     <script type="text/template" id="todo-template">
-        <input type="checkbox" name="completed" <%= completed ? 'checked=checked' : '' %>><label for="completed"><%= title %></label>
-        <button>delete</button>
+        <input type="checkbox" class="toggle-read" name="completed" <%= completed ? 'checked=checked' : '' %>>
+        <label for="completed" class="todo"><%= title %></label>
+        <button class="button-outline button-clear todo-remove">&#10005;</button>        
     </script>
     <script src="./node_modules/underscore/underscore-min.js"></script>
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>

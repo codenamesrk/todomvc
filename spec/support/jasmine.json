@@ -1,9 +1,12 @@
 {
   "spec_dir": "spec",
-  "spec_files": [
+  "spec_files": [    
     "**/*[sS]pec.js"
   ],
   "helpers": [
+    "../node_modules/underscore/underscore-min.js",
+    "../node_modules/jquery/dist/jquery.min.js",
+    "../node_modules/backbone/backbone-min.js",
     "helpers/**/*.js"
   ],
   "stopSpecOnExpectationFailure": false,
