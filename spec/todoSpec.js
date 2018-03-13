@@ -97,7 +97,7 @@ describe('Todo View Test', function(){
         expect(todoEl).toContainElement('input');
         expect(todoEl).toContainElement('label');
         expect(todoEl).toContainElement('button');
-    })
+    });
 });
 
 describe('Todo Collection View Test', function(){    
@@ -135,5 +135,11 @@ describe('Todo Collection View Test', function(){
         var todosEl = todosView.render();
         // console.log(todosEl.$el.html());
         expect(todosEl.$el.html()).toContain(TEST_LIST);
+    });
+});
+
+describe('New Todo View Test', function(){
+    it('should be defined', function(){
+        expect(App.View.NewTodo).toBeDefined();
     });
 });

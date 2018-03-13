@@ -6,6 +6,7 @@
         Helper: {},
         Todos: []
     };
+    const ENTER_KEY = 13;
 
     App.Helper.Template = function(id){
         return _.template($(id).html());
@@ -49,6 +50,9 @@
         return Backbone.View.extend({
             tagName: 'ul',
             className: 'todo-list',
+            initialize: function(){
+                this.collection.on('add',this.addTodo,this);
+            },
             addTodo: function(todo){
                 var todoView = new todoViewConst({model: todo});
                 this.$el.append(todoView.render().el);                   
@@ -60,20 +64,32 @@
         });
     };
 
+    App.View.NewTodo = function(){
+        return Backbone.View.extend({
+            el: $('#todo-new'),
+            events: {
+                'keyup': 'addTodo'
+            },
+            addTodo: function(e){
+                if (e.which === ENTER_KEY) {                    
+                    todos.add({
+                        title: this.$el.val()
+                    },{validate: true});
+                    this.$el.val('');                                     
+                }                
+            }
+        });
+    };
+
     var todo = new App.Model.Todo();
     var todos = new App.Collection.Todo();
 
-    todos.set([
-        {title: 'first todo'},
-        {title: 'Seond todo', completed: true},
-        {title: 'third todo', completed: true}
-    ]);
-
     var todoViewConst = App.View.Todo();
     var todosViewConst = App.View.Todos();
+    var newTodoViewConst = App.View.NewTodo();
         
     var todosView = new todosViewConst({collection: todos});
-        
+    var newTodoView = new newTodoViewConst(); 
     var todoContainer = $('.main');   
     todoContainer.html(todosView.render().el);
 
